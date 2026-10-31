@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Qryptex Lab: сайты и IT-услуги, заказ в Telegram-боте</title>
+    <meta name="description"
+        content="Посмотрите, каким будет ваш сайт: подберите тип, цвет и стиль. Заказ оформляется в Telegram-боте.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&display=swap&subset=cyrillic"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <header>
+            <svg viewBox="0 0 512 512" aria-hidden="true">
+                <rect width="512" height="512" rx="64" fill="#141a22" />
+                <g fill="none" stroke="#00e5a0" stroke-width="30" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="148,184 76,256 148,328" />
+                    <line x1="292" y1="172" x2="220" y2="340" />
+                    <polyline points="364,184 436,256 364,328" />
+                </g>
+            </svg>
+            <b>Qryptex Lab</b>
+        </header>
+
+        <div class="hero">
+            <h1>Посмотрите, каким будет ваш сайт</h1>
+            <p>Выберите тип сайта, цвет и стиль, и макет сразу покажет результат. Заказать можно в конце, в нашем
+                Telegram-боте.</p>
+            <a class="btn" href="#builder">Подобрать дизайн</a>
+        </div>
+
+        <section id="builder">
+            <h2>Как будет выглядеть ваш сайт</h2>
+            <p class="sub">Меняйте настройки: макет обновляется сразу.</p>
+
+            <div class="pvbox">
+                <div class="pv" id="pv" aria-live="polite"></div>
+            </div>
+
+            <div class="ctl"><label for="nm">Название вашего бизнеса</label>
+                <input type="text" id="nm" maxlength="28" placeholder="Например, Кофейня «Утро»">
+            </div>
+
+            <div class="ctl"><span class="l">Тип сайта</span>
+                <div class="opts" id="o-type"></div>
+            </div>
+            <div class="ctl"><span class="l">Цвет</span>
+                <div class="opts" id="o-color"></div>
+            </div>
+            <div class="ctl"><span class="l">Стиль</span>
+                <div class="opts" id="o-style"></div>
+            </div>
+            <div class="ctl"><span class="l">Фон</span>
+                <div class="opts" id="o-theme"></div>
+            </div>
+
+            <div class="sum" id="sum"></div>
+            <a class="btn" href="#order">Нравится? Перейти к заказу</a>
+        </section>
+
+        <section class="about">
+            <h2>О нас</h2>
+            <p>Qryptex Lab — студия, которая создаёт сайты и IT-решения для бизнеса: сайты-визитки, интернет-магазины,
+                лендинги, а также поддержку и обновление готовых сайтов.</p>
+            <p>Мы делаем сайты, которые удобно открываются на телефоне и помогают получать клиентов. Работаем понятно:
+                сначала обсуждаем задачу, затем согласуем сроки и стоимость, показываем результат и только потом
+                передаём сайт.</p>
+            <p>Скоро мы откроем курсы по веб-разработке. Следите за новостями в нашем Telegram-канале.</p>
+        </section>
+
+        <section id="order">
+            <h2>Заказать сайт</h2>
+            <p class="sub">На сайте заказ не оформляется, всё происходит в нашем Telegram-боте. Бот принимает заявку,
+                рассказывает об услугах и получает ваш выбор дизайна.</p>
+            <div class="sum" id="sum2"></div>
+            <ol class="steps">
+                <li>Нажмите «Заказать в боте»: бот откроется, а ваш выбор дизайна передастся ему автоматически.</li>
+                <li>Расскажите о своей задаче в боте и оставьте заявку.</li>
+                <li>Мы свяжемся с вами, согласуем сроки и стоимость и начнём работу.</li>
+            </ol>
+            <p style="height:18px"></p>
+            <div class="actions">
+                <button class="btn go" type="button">Заказать в боте</button>
+                <a class="btn ghost" id="chan-btn" href="https://t.me/Qryptex_lab" target="_blank" rel="noopener">Наш
+                    канал</a>
+            </div>
+            <div class="toast" id="toast" role="status">Бот пока настраивается. Заказ через Telegram заработает совсем
+                скоро.</div>
+        </section>
+
+        <footer>
+            <span>Qryptex Lab</span>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
