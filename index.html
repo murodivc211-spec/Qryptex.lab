@@ -2,10 +2,10 @@
 <html lang="uz">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Qryptex Lab: veb-saytlar va IT-xizmatlar, buyurtma Telegram-botda</title>
-<meta name="description" content="Veb-sayt yaratish: vizitka-sayt, internet-do‘kon, lending. Saytingiz qanday bo‘lishini oldindan tanlang, buyurtma Telegram-botda beriladi.">
-<meta name="theme-color" content="#0b1426">
+<meta name="description" content="Veb-sayt yaratish: vizitka-sayt, internet-do‘kon, lending. Telegram-botda buyurtma bering yoki ma‘lumot oling.">
+<meta name="theme-color" content="#070d1c">
 <link rel="canonical" href="https://murodivc211-spec.github.io/Qryptex.lab/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Qryptex Lab: veb-saytlar va IT-xizmatlar">
@@ -16,62 +16,102 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="wrap">
 <header>
-<div class="logo"><b>&lt;/&gt;</b>Qryptex Lab</div>
-<div class="lang"><button id="bUz" class="on">UZ</button> <button id="bRu">RU</button></div>
+<div class="wrap">
+<a class="logo" href="#top"><b>&lt;/&gt;</b>Qryptex Lab</a>
+<nav class="menu"><a href="#services" data-t="n1">Xizmatlar</a><a href="#steps" data-t="n2">Qanday ishlaymiz</a><a href="#builder" data-t="n3">Dizayn tanlash</a></nav>
+<div class="lang"><button id="bUz" class="on">UZ</button><button id="bRu">RU</button></div>
+<a class="btn go-order" target="_blank" rel="noopener" data-t="bo2">Buyurtma</a>
+</div>
 </header>
-<main>
+
+<main id="top">
+<div class="wrap">
+
 <section class="hero">
-<h1 data-t="h1">Saytingiz qanday bo‘lishini oldindan ko‘ring</h1>
-<p data-t="hp">Sayt turi, rang va uslubni tanlang: maket natijani darhol ko‘rsatadi. Buyurtma oxirida, Telegram-botimizda beriladi.</p>
-<a class="btn" href="#builder" data-t="cta">Dizaynni tanlash</a>
+<div>
+<h1 data-t="h1">Biznesingiz uchun sayt yaratamiz</h1>
+<p data-t="hp">Sayt turini tanlang, natijani oldindan ko‘ring va Telegram-botda buyurtma bering. Savolingiz bo‘lsa, ma‘lumotni ham o‘sha yerda olasiz.</p>
+<div class="cta">
+<a class="btn big go-order" target="_blank" rel="noopener" data-t="bo">Botda buyurtma berish</a>
+<a class="btn big alt go-info" target="_blank" rel="noopener" data-t="bi">Ma‘lumot olish</a>
+</div>
+<ul class="ticks">
+<li data-t="t1">Telefonda qulay ochiladigan saytlar</li>
+<li data-t="t2">Muddat va narx oldindan kelishiladi</li>
+<li data-t="t3">Avval natijani ko‘rsatamiz, keyin topshiramiz</li>
+</ul>
+</div>
+<div class="art" aria-hidden="true">&lt;/&gt;</div>
+</section>
+
+<section id="services">
+<h2 data-t="n1">Xizmatlar</h2>
+<div class="grid g4">
+<div class="card"><h3 data-t="oCard">Vizitka-sayt</h3><p data-t="sv1">Xizmatlar, narxlar va aloqa bir sahifada.</p></div>
+<div class="card"><h3 data-t="oShop">Internet-do‘kon</h3><p data-t="sv2">Mahsulotlar katalogi va savatcha.</p></div>
+<div class="card"><h3 data-t="oLand">Lending</h3><p data-t="sv3">Bitta sahifa: taklif, afzalliklar va ariza.</p></div>
+<div class="card"><h3 data-t="sv4t">Qo‘llab-quvvatlash</h3><p data-t="sv4">Tayyor saytlarni yangilash va qo‘llab-quvvatlash.</p></div>
+</div>
+</section>
+
+<section id="steps">
+<h2 data-t="n2">Qanday ishlaymiz</h2>
+<div class="grid g3">
+<div class="card"><span class="num">1</span><h3 data-t="p1t">Muhokama</h3><p data-t="p1">Vazifangizni botda yozasiz, biz uni muhokama qilamiz.</p></div>
+<div class="card"><span class="num">2</span><h3 data-t="p2t">Kelishuv</h3><p data-t="p2">Muddat va narxni kelishamiz.</p></div>
+<div class="card"><span class="num">3</span><h3 data-t="p3t">Topshirish</h3><p data-t="p3">Natijani ko‘rsatamiz va shundan keyingina saytni topshiramiz.</p></div>
+</div>
 </section>
 
 <section id="builder">
-<h2 data-t="bh">Saytingiz shunday ko‘rinadi</h2>
-<p data-t="bp">Sozlamalarni o‘zgartiring: maket darhol yangilanadi.</p>
+<h2 data-t="bh">Dizaynni tanlang</h2>
+<p data-t="bp">Bu ixtiyoriy: tanlovingiz botga avtomatik uzatiladi.</p>
 <div class="panel">
-<div class="ctrl">
+<div class="card ctrl">
 <div><label for="name" data-t="lName">Biznesingiz nomi</label><input id="name" maxlength="40" placeholder="Nur Market"></div>
-<div><label for="type" data-t="lType">Sayt turi</label><select id="type"><option value="card" data-t="oCard">Vizitka-sayt</option><option value="shop" data-t="oShop">Internet-do‘kon</option><option value="land" data-t="oLand">Lending</option></select></div>
+<div><label data-t="lType">Sayt turi</label>
+<div class="seg" data-g="type"><button data-v="card" data-t="oCard">Vizitka-sayt</button><button data-v="shop" data-t="oShop">Internet-do‘kon</button><button data-v="land" data-t="oLand">Lending</button></div></div>
 <div><label data-t="lColor">Rang</label><div class="sw" id="sw"></div></div>
-<div><label for="style" data-t="lStyle">Uslub</label><select id="style"><option value="min" data-t="oMin">Minimalistik</option><option value="mod" data-t="oMod" selected>Zamonaviy</option><option value="bold" data-t="oBold">Yorqin</option></select></div>
-<div><label for="bg" data-t="lBg">Fon</label><select id="bg"><option value="light" data-t="oLight">Yorug‘</option><option value="dark" data-t="oDark">Qorong‘i</option></select></div>
-<a class="btn" href="#order" data-t="toOrder">Yoqdimi? Buyurtmaga o‘tish</a>
+<div><label data-t="lStyle">Uslub</label>
+<div class="seg" data-g="style"><button data-v="min" data-t="oMin">Minimalistik</button><button data-v="mod" data-t="oMod">Zamonaviy</button><button data-v="bold" data-t="oBold">Yorqin</button></div></div>
+<div><label data-t="lBg">Fon</label>
+<div class="seg" data-g="bg"><button data-v="light" data-t="oLight">Yorug‘</button><button data-v="dark" data-t="oDark">Qorong‘i</button></div></div>
+<a class="btn" id="botDesign" target="_blank" rel="noopener" data-t="bd">Shu dizayn bilan buyurtma</a>
 </div>
 <div class="pv" id="pv">
 <div class="pv-bar"><span id="pvName"></span><span>☰</span></div>
-<div class="pv-hero"><h3 id="pvTitle"></h3><p id="pvSub"></p><span class="pv-btn" id="pvBtn"></span></div>
+<div class="pv-hero"><h3 id="pvTitle"></h3><span class="pv-btn" id="pvBtn"></span></div>
 <div class="pv-cards"><div></div><div></div><div></div></div>
 </div>
 </div>
 </section>
 
-<section id="about">
+<section>
 <h2 data-t="ah">Biz haqimizda</h2>
-<p data-t="a1">Qryptex Lab: biznes uchun sayt va IT-yechimlar yaratadigan studiya. Vizitka-saytlar, internet-do‘konlar, lendinglar, shuningdek tayyor saytlarni qo‘llab-quvvatlash va yangilash.</p>
-<p data-t="a2">Saytlarimiz telefonda qulay ochiladi va mijoz topishga yordam beradi. Ishni tushunarli olib boramiz: avval vazifani muhokama qilamiz, keyin muddat va narxni kelishamiz, natijani ko‘rsatamiz va shundan keyingina saytni topshiramiz.</p>
-<p data-t="a3">Tez orada veb-dasturlash kurslarini ochamiz. Yangiliklarni Telegram-kanalimizdan kuzatib boring.</p>
+<p data-t="a1">Qryptex Lab: biznes uchun sayt va IT-yechimlar yaratadigan studiya. Tez orada veb-dasturlash kurslarini ochamiz, yangiliklarni Telegram-kanaldan kuzating.</p>
 </section>
 
-<section id="order">
-<h2 data-t="oh">Sayt buyurtma qilish</h2>
-<p data-t="op">Buyurtma saytning o‘zida rasmiylashtirilmaydi, hammasi Telegram-botda bo‘ladi. Bot arizani qabul qiladi, xizmatlar haqida gapirib beradi va siz tanlagan dizaynni oladi.</p>
-<ol>
-<li data-t="s1">“Botda buyurtma berish” tugmasini bosing: bot ochiladi va tanlagan dizayningiz unga avtomatik uzatiladi.</li>
-<li data-t="s2">Botda vazifangizni yozing va ariza qoldiring.</li>
-<li data-t="s3">Biz siz bilan bog‘lanamiz, muddat va narxni kelishib, ishni boshlaymiz.</li>
-</ol>
-<div class="row">
-<a class="btn" id="botBtn" href="#" target="_blank" rel="noopener" data-t="bot">Botda buyurtma berish</a>
-<a class="btn alt" href="https://t.me/Qryptex_lab" target="_blank" rel="noopener" data-t="chan">Bizning kanal</a>
+<section class="final" id="order">
+<h2 data-t="fh">Savolingiz bormi yoki buyurtma bermoqchimisiz?</h2>
+<p data-t="fp">Hammasi Telegram-botda: u arizani qabul qiladi va xizmatlar haqida aytib beradi.</p>
+<div class="cta">
+<a class="btn big go-order" target="_blank" rel="noopener" data-t="bo">Botda buyurtma berish</a>
+<a class="btn big alt go-info" target="_blank" rel="noopener" data-t="bi">Ma‘lumot olish</a>
+<a class="btn big alt" href="https://t.me/Qryptex_lab" target="_blank" rel="noopener" data-t="chan">Bizning kanal</a>
 </div>
 <!-- Bot tayyor bo‘lgach, quyidagi qatorni o‘chiring -->
 <p class="note" data-t="note">Bot hozir sozlanmoqda. Telegram orqali buyurtma tez orada ishlaydi.</p>
 </section>
+
+</div>
 </main>
-<footer>© Qryptex Lab · <a href="https://t.me/Qryptex_lab" target="_blank" rel="noopener">Telegram</a></footer>
+
+<footer><div class="wrap">© Qryptex Lab · <a href="https://t.me/Qryptex_lab" target="_blank" rel="noopener">Telegram</a></div></footer>
+
+<div class="bar">
+<a class="btn go-order" target="_blank" rel="noopener" data-t="bo2">Buyurtma</a>
+<a class="btn alt go-info" target="_blank" rel="noopener" data-t="bi2">Ma‘lumot</a>
 </div>
 
 <!-- Statistika kodi (Google Analytics yoki Yandex Metrika) shu yerga qo‘yiladi -->
