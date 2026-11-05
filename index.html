@@ -1,159 +1,80 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="uz">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Qryptex Lab: аудит сайта, сайты, Telegram-боты и mini apps</title>
-<meta name="description" content="Qryptex Lab разбирает, что мешает вашему сайту получать клиентов. Сайты, Telegram-боты и mini apps. Заявка через Telegram-бота.">
-<meta name="theme-color" content="#05080a">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Qryptex Lab: veb-saytlar va IT-xizmatlar, buyurtma Telegram-botda</title>
+<meta name="description" content="Veb-sayt yaratish: vizitka-sayt, internet-do‘kon, lending. Saytingiz qanday bo‘lishini oldindan tanlang, buyurtma Telegram-botda beriladi.">
+<meta name="theme-color" content="#0b1426">
+<link rel="canonical" href="https://murodivc211-spec.github.io/Qryptex.lab/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Qryptex Lab: veb-saytlar va IT-xizmatlar">
+<meta property="og:description" content="Saytingiz qanday bo‘lishini oldindan ko‘ring va Telegram-botda buyurtma bering.">
+<meta property="og:url" content="https://murodivc211-spec.github.io/Qryptex.lab/">
+<!-- Ulashilganda rasm chiqishi uchun: logotipni repoga yuklab, quyidagi qatorni oching -->
+<!-- <meta property="og:image" content="https://murodivc211-spec.github.io/Qryptex.lab/logo.png"> -->
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<canvas id="rain" aria-hidden="true"></canvas>
-
-<header class="top">
-  <a class="brand" href="#top">&lt;/&gt; Qryptex Lab</a>
-  <a class="btn sm" href="#how">Получить аудит</a>
+<div class="wrap">
+<header>
+<div class="logo"><b>&lt;/&gt;</b>Qryptex Lab</div>
+<div class="lang"><button id="bUz" class="on">UZ</button> <button id="bRu">RU</button></div>
 </header>
+<main>
+<section class="hero">
+<h1 data-t="h1">Saytingiz qanday bo‘lishini oldindan ko‘ring</h1>
+<p data-t="hp">Sayt turi, rang va uslubni tanlang: maket natijani darhol ko‘rsatadi. Buyurtma oxirida, Telegram-botimizda beriladi.</p>
+<a class="btn" href="#builder" data-t="cta">Dizaynni tanlash</a>
+</section>
 
-<main id="top">
-  <section class="hero">
-    <div class="logo" aria-hidden="true">&lt;/&gt;</div>
-    <h1>Аудит вашего сайта</h1>
-    <p class="lead">Сайт есть, а заявок нет? Разберём, что мешает получать клиентов.</p>
-    <div class="cta">
-      <a class="btn" href="https://t.me/Qryptex_bot" data-link="bot" target="_blank" rel="noopener">Получить аудит в боте</a>
-      <a class="btn ghost" href="#check">Проверить самому</a>
-      <a class="btn ghost" href="#builder">Заказать сайт или бота</a>
-    </div>
-  </section>
+<section id="builder">
+<h2 data-t="bh">Saytingiz shunday ko‘rinadi</h2>
+<p data-t="bp">Sozlamalarni o‘zgartiring: maket darhol yangilanadi.</p>
+<div class="panel">
+<div class="ctrl">
+<div><label for="name" data-t="lName">Biznesingiz nomi</label><input id="name" maxlength="40" placeholder="Nur Market"></div>
+<div><label for="type" data-t="lType">Sayt turi</label><select id="type"><option value="card" data-t="oCard">Vizitka-sayt</option><option value="shop" data-t="oShop">Internet-do‘kon</option><option value="land" data-t="oLand">Lending</option></select></div>
+<div><label data-t="lColor">Rang</label><div class="sw" id="sw"></div></div>
+<div><label for="style" data-t="lStyle">Uslub</label><select id="style"><option value="min" data-t="oMin">Minimalistik</option><option value="mod" data-t="oMod" selected>Zamonaviy</option><option value="bold" data-t="oBold">Yorqin</option></select></div>
+<div><label for="bg" data-t="lBg">Fon</label><select id="bg"><option value="light" data-t="oLight">Yorug‘</option><option value="dark" data-t="oDark">Qorong‘i</option></select></div>
+<a class="btn" href="#order" data-t="toOrder">Yoqdimi? Buyurtmaga o‘tish</a>
+</div>
+<div class="pv" id="pv">
+<div class="pv-bar"><span id="pvName"></span><span>☰</span></div>
+<div class="pv-hero"><h3 id="pvTitle"></h3><p id="pvSub"></p><span class="pv-btn" id="pvBtn"></span></div>
+<div class="pv-cards"><div></div><div></div><div></div></div>
+</div>
+</div>
+</section>
 
-  <section class="sec" id="why">
-    <h2>Клиенты уходят за 3 секунды</h2>
-    <div class="count" id="count">
-      <div class="num" id="num">3</div>
-      <div class="side">
-        <div class="bar"><i id="fill"></i></div>
-        <p id="gone">Если сайт тормозит, человек просто закрывает его.</p>
-      </div>
-    </div>
-  </section>
+<section id="about">
+<h2 data-t="ah">Biz haqimizda</h2>
+<p data-t="a1">Qryptex Lab: biznes uchun sayt va IT-yechimlar yaratadigan studiya. Vizitka-saytlar, internet-do‘konlar, lendinglar, shuningdek tayyor saytlarni qo‘llab-quvvatlash va yangilash.</p>
+<p data-t="a2">Saytlarimiz telefonda qulay ochiladi va mijoz topishga yordam beradi. Ishni tushunarli olib boramiz: avval vazifani muhokama qilamiz, keyin muddat va narxni kelishamiz, natijani ko‘rsatamiz va shundan keyingina saytni topshiramiz.</p>
+<p data-t="a3">Tez orada veb-dasturlash kurslarini ochamiz. Yangiliklarni Telegram-kanalimizdan kuzatib boring.</p>
+</section>
 
-  <section class="sec" id="problems">
-    <h2>Что мешает получать клиентов</h2>
-    <ul class="bad">
-      <li><b>Медленно грузится на телефоне</b><span>Тяжёлые картинки и лишний код: человек не дожидается.</span></li>
-      <li><b>Неудобно на маленьком экране</b><span>Мелкий текст, кнопки трудно нажать, приходится увеличивать.</span></li>
-      <li><b>Непонятный дизайн</b><span>Не ясно, чем вы занимаетесь и куда нажимать.</span></li>
-      <li><b>Нет кнопки «Заказать»</b><span>Клиент готов написать, но не находит, как это сделать.</span></li>
-    </ul>
-  </section>
-
-  <section class="sec" id="check">
-    <h2>Быстрая проверка</h2>
-    <p class="sub">Отметьте, что есть на вашем сайте. Вы получите оценку и готовый текст заявки для бота.</p>
-    <div class="panel">
-      <label class="ck"><input type="checkbox" value="медленно грузится на телефоне"> Медленно грузится на телефоне</label>
-      <label class="ck"><input type="checkbox" value="неудобно на маленьком экране"> Неудобно на маленьком экране</label>
-      <label class="ck"><input type="checkbox" value="непонятный дизайн"> Непонятный дизайн</label>
-      <label class="ck"><input type="checkbox" value="нет кнопки «Заказать»"> Нет кнопки «Заказать»</label>
-      <input id="siteUrl" type="url" inputmode="url" autocomplete="url" placeholder="Ссылка на ваш сайт" aria-label="Ссылка на ваш сайт">
-      <div class="res">
-        <div class="ring" id="ring"><b id="score">100</b></div>
-        <p id="verdict"></p>
-      </div>
-      <button class="btn" id="send" type="button">Отправить в бота</button>
-      <p class="note">Текст скопируется и откроется бот. Вставьте текст в чат.</p>
-    </div>
-  </section>
-
-  <section class="sec" id="how">
-    <h2>Как получить аудит</h2>
-    <ol class="steps">
-      <li>Напишите боту слово <b>АУДИТ</b></li>
-      <li>Отправьте ссылку на свой сайт</li>
-      <li>Получите разбор</li>
-    </ol>
-    <a class="btn" href="https://t.me/Qryptex_bot" data-link="bot" target="_blank" rel="noopener">Написать боту @Qryptex_bot</a>
-  </section>
-
-  <section class="sec" id="builder">
-    <h2>Соберите свой сайт или бота</h2>
-    <p class="sub">Меняйте настройки: макет обновляется сразу. Заказ оформляется в Telegram-боте.</p>
-    <div class="tabs">
-      <button type="button" class="tab" data-mode="site">Сайт</button>
-      <button type="button" class="tab" data-mode="bot">Telegram-бот</button>
-    </div>
-    <div class="panel">
-      <label class="fld">Название вашего бизнеса<input id="bizName" type="text" maxlength="30" placeholder="Например, Кофейня Уют"></label>
-      <div class="grp" data-for="site">
-        <label class="fld">Тип сайта
-          <select id="siteType"><option value="visit">Сайт-визитка</option><option value="landing">Лендинг</option><option value="shop">Интернет-магазин</option><option value="portfolio">Портфолио</option></select>
-        </label>
-        <div class="fld">Цвет
-          <div class="sw" id="colors">
-            <button type="button" style="--c:#39ff6a" data-k="green" data-c="#39ff6a" data-n="зелёный" aria-label="Зелёный"></button>
-            <button type="button" style="--c:#3b82f6" data-k="blue" data-c="#3b82f6" data-n="синий" aria-label="Синий"></button>
-            <button type="button" style="--c:#a855f7" data-k="purple" data-c="#a855f7" data-n="фиолетовый" aria-label="Фиолетовый"></button>
-            <button type="button" style="--c:#fb923c" data-k="orange" data-c="#fb923c" data-n="оранжевый" aria-label="Оранжевый"></button>
-            <button type="button" style="--c:#ec4899" data-k="pink" data-c="#ec4899" data-n="розовый" aria-label="Розовый"></button>
-          </div>
-        </div>
-        <div class="fld">Стиль
-          <div class="seg" id="styles"><button type="button" data-v="strict">Строгий</button><button type="button" data-v="modern">Современный</button><button type="button" data-v="bright">Яркий</button></div>
-        </div>
-        <div class="fld">Фон
-          <div class="seg" id="bgs"><button type="button" data-v="dark">Тёмный</button><button type="button" data-v="light">Светлый</button></div>
-        </div>
-      </div>
-      <div class="grp" data-for="bot" hidden>
-        <label class="fld">Что делает бот
-          <select id="botType"><option value="orders">Приём заказов</option><option value="booking">Запись на услуги</option><option value="faq">Ответы на вопросы</option><option value="catalog">Каталог товаров</option></select>
-        </label>
-        <label class="ck"><input type="checkbox" class="opt" value="pay"> Оплата в боте</label>
-        <label class="ck"><input type="checkbox" class="opt" value="mail"> Рассылка клиентам</label>
-        <label class="ck"><input type="checkbox" class="opt" value="admin"> Панель администратора</label>
-      </div>
-    </div>
-    <div class="pv" id="pv"></div>
-    <a class="btn" href="#order">Нравится? Перейти к заказу</a>
-  </section>
-
-  <section class="sec" id="order">
-    <h2>Заказать</h2>
-    <p class="sub">На сайте заказ не оформляется, всё происходит в нашем Telegram-боте. Бот принимает заявку и получает ваш выбор.</p>
-    <pre class="sum" id="sum"></pre>
-    <ol class="steps">
-      <li>Нажмите «Заказать в боте»: бот откроется, а выбор скопируется</li>
-      <li>Вставьте текст в чат и расскажите о задаче</li>
-      <li>Мы свяжемся, согласуем сроки и стоимость и начнём работу</li>
-    </ol>
-    <button class="btn" id="orderBtn" type="button">Заказать в боте</button>
-  </section>
-
-  <section class="sec" id="services">
-    <h2>Что мы делаем</h2>
-    <dl class="svc">
-      <dt>Сайты</dt><dd>Лендинги, сайты-визитки и интернет-магазины, удобные на телефоне.</dd>
-      <dt>Telegram-боты</dt><dd>Приём заявок и заказов, запись, каталог и ответы клиентам без вашего участия. Соберите своего бота в конструкторе выше.</dd>
-      <dt>Mini apps</dt><dd>Приложения внутри Telegram: каталог, запись, заказ.</dd>
-    </dl>
-    <p class="sub">Скоро откроем курсы по веб-разработке. Новости в Telegram-канале.</p>
-  </section>
-
-  <section class="sec" id="links">
-    <h2>Мы на связи</h2>
-    <div class="links">
-      <a class="btn ghost" href="https://t.me/Qryptex_bot" data-link="bot" target="_blank" rel="noopener">Бот @Qryptex_bot</a>
-      <a class="btn ghost" href="https://t.me/Qryptex_lab" data-link="channel" target="_blank" rel="noopener">Telegram-канал</a>
-      <a class="btn ghost" href="https://www.instagram.com/qryptex_lab" data-link="insta" target="_blank" rel="noopener">Instagram</a>
-    </div>
-  </section>
+<section id="order">
+<h2 data-t="oh">Sayt buyurtma qilish</h2>
+<p data-t="op">Buyurtma saytning o‘zida rasmiylashtirilmaydi, hammasi Telegram-botda bo‘ladi. Bot arizani qabul qiladi, xizmatlar haqida gapirib beradi va siz tanlagan dizaynni oladi.</p>
+<ol>
+<li data-t="s1">“Botda buyurtma berish” tugmasini bosing: bot ochiladi va tanlagan dizayningiz unga avtomatik uzatiladi.</li>
+<li data-t="s2">Botda vazifangizni yozing va ariza qoldiring.</li>
+<li data-t="s3">Biz siz bilan bog‘lanamiz, muddat va narxni kelishib, ishni boshlaymiz.</li>
+</ol>
+<div class="row">
+<a class="btn" id="botBtn" href="#" target="_blank" rel="noopener" data-t="bot">Botda buyurtma berish</a>
+<a class="btn alt" href="https://t.me/Qryptex_lab" target="_blank" rel="noopener" data-t="chan">Bizning kanal</a>
+</div>
+<!-- Bot tayyor bo‘lgach, quyidagi qatorni o‘chiring -->
+<p class="note" data-t="note">Bot hozir sozlanmoqda. Telegram orqali buyurtma tez orada ishlaydi.</p>
+</section>
 </main>
+<footer>© Qryptex Lab · <a href="https://t.me/Qryptex_lab" target="_blank" rel="noopener">Telegram</a></footer>
+</div>
 
-<footer>&lt;/&gt; Qryptex Lab, 2026</footer>
-<div id="toast" role="status" aria-live="polite"></div>
-<script src="script.js"></script>
+<!-- Statistika kodi (Google Analytics yoki Yandex Metrika) shu yerga qo‘yiladi -->
+<script src="script.js" charset="utf-8"></script>
 </body>
 </html>
